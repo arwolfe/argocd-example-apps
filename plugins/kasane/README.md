@@ -4,7 +4,7 @@
 
 Use following steps to try the application:
 
-* Follow instructions from [custom_tools.md](https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/custom_tools.md) to make sure `kasane` binary is available in `argocd-repo-server` pod.
+* Follow instructions from [custom_tools.md](https://github.com/arwolfe/argo-cd/blob/master/docs/operator-manual/custom_tools.md) to make sure `kasane` binary is available in `argocd-repo-server` pod.
 * Register `kasane` plugin `argocd-cm` ConfigMap:
 
 ```yaml
@@ -22,7 +22,7 @@ data:
 ```
 argocd app create kasane \
     --config-management-plugin kasane \
-    --repo https://github.com/argoproj/argocd-example-apps \
+    --repo https://github.com/arwolfe/argocd-example-apps \
     --path plugins/kasane \
     --dest-server https://kubernetes.default.svc \
     --dest-namespace default
